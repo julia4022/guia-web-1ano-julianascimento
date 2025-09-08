@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guia Profissional de Desenvolvimento Web</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="#">Guia Web</a>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Abrir menu">☰</button>
+      <nav id="main-nav" class="main-nav">
+        <a href="#home">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#recursos">Recursos</a>
+        <a href="#contato">Contato</a>
+        <button id="theme-toggle" class="btn ghost" aria-label="Alternar tema">🌙</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container">
+        <h1>Aprenda HTML, CSS e JavaScript de forma prática e profissional</h1>
+        <p class="lead">Exercícios, exemplos e explicações claras para você dominar o desenvolvimento web.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#recursos">Começar</a>
+          <a class="btn" href="#sobre">Saiba mais</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="container cards">
+      <article class="card">
+        <h2>🔤 O que é HTML?</h2>
+        <p>HTML (HyperText Markup Language) estrutura o conteúdo da web: títulos, parágrafos, listas, links e imagens.</p>
+      </article>
+
+      <article class="card">
+        <h2>🎨 O que é CSS?</h2>
+        <p>CSS (Cascading Style Sheets) estiliza o HTML — cores, tipografia, layout e responsividade.</p>
+      </article>
+
+      <article class="card">
+        <h2>⚙️ O que é JavaScript?</h2>
+        <p>JavaScript adiciona interatividade: manipula DOM, responde a eventos e faz lógica no cliente.</p>
+      </article>
+    </section>
+
+    <section id="recursos" class="container resources">
+      <h2>Recursos</h2>
+      <div class="grid">
+        <div class="resource">
+          <h3>Exemplos Práticos</h3>
+          <p>Pequenos projetos e exercícios comentados.</p>
+        </div>
+        <div class="resource">
+          <h3>Referências Rápidas</h3>
+          <p>Tabelas e cheatsheets para consultas rápidas.</p>
+        </div>
+        <div class="resource">
+          <h3>Desafios</h3>
+          <p>Mini-desafios para praticar conceitos e lógica.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" class="container contact">
+      <h2>Contato</h2>
+      <p>Tem dúvidas ou sugestões? Envie um e-mail para <a href="mailto:contato@exemplo.com">contato@exemplo.com</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 - Guia Profissional de Desenvolvimento Web</p>
+    </div>
+    <button id="to-top" class="to-top" aria-label="Voltar ao topo">↑</button>
+  </footer>
+
+  <script src="js/app.js" defer></script>
+</body>
+</html>

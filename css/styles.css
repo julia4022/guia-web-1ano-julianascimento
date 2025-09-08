@@ -1,0 +1,82 @@
+/* styles.css - Modern, responsive styling for Guia Web */
+:root{
+  --bg: #f6f8fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #2563eb;
+  --accent: #7c3aed;
+  --glass: rgba(255,255,255,0.6);
+  --radius: 12px;
+}
+
+[data-theme="dark"]{
+  --bg: #0b1020;
+  --card: #0f1724;
+  --text: #e6eef8;
+  --muted: #9aa6bf;
+  --primary: #60a5fa;
+  --accent: #a78bfa;
+  --glass: rgba(255,255,255,0.04);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, Poppins, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg,var(--bg),#e9eef8 60%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.nav-row{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.brand{font-weight:700;color:var(--text);text-decoration:none;font-size:1.125rem}
+
+/* Header / Nav */
+.site-header{backdrop-filter: blur(6px);background:var(--glass);border-bottom:1px solid rgba(0,0,0,0.04)}
+.main-nav{display:flex;gap:12px;align-items:center}
+.main-nav a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px}
+.main-nav a:hover{background:rgba(0,0,0,0.03);color:var(--text)}
+.nav-toggle{display:none;background:transparent;border:0;font-size:1.25rem;padding:8px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;border:0;background:transparent;color:var(--text);cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--primary),var(--accent));color:white}
+.btn.ghost{border:1px solid rgba(0,0,0,0.06);padding:8px 10px}
+
+/* Hero */
+.hero{padding:64px 0 48px}
+.hero h1{font-size:2rem;margin:0 0 12px}
+.lead{color:var(--muted);font-size:1.05rem;margin-bottom:18px}
+.hero-actions{display:flex;gap:12px}
+
+/* Cards */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:18px}
+.card{background:var(--card);border-radius:var(--radius);padding:18px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.card h2{margin-top:0;margin-bottom:8px}
+
+/* Resources grid */
+.resources .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.resource{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 20px rgba(2,6,23,0.06)}
+
+/* Contact */
+.contact p{color:var(--muted)}
+
+/* Footer */
+.site-footer{position:relative;padding:24px 0;margin-top:36px}
+.site-footer p{margin:0;color:var(--muted)}
+.to-top{position:fixed;right:18px;bottom:18px;border-radius:999px;border:0;padding:10px 12px;background:var(--primary);color:white;display:none;cursor:pointer}
+
+/* Responsive */
+@media (max-width:800px){
+  .nav-toggle{display:inline-flex}
+  .main-nav{position:fixed;right:16px;top:64px;background:var(--card);padding:12px;border-radius:12px;flex-direction:column;gap:6px;box-shadow:0 8px 30px rgba(2,6,23,0.12);display:none}
+  .main-nav.open{display:flex}
+  .hero h1{font-size:1.5rem}
+}
+
+/* Accessibility focus */
+a:focus,button:focus{outline:2px solid var(--primary);outline-offset:3px}
+
+/* Small utilities */
+.hidden{display:none}
